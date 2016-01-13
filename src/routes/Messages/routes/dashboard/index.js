@@ -1,18 +1,18 @@
 module.exports = {
-  path: '/apartment/:id',
-  
+  path: 'dashboard',
+//
   getChildRoutes(location, cb) {
 	    require.ensure([], (require) => {
 	      cb(null, [
-	        require('./routes/Modalshow'),
-	  
+	        require('./routes/details')
+
 	      ])
 	    })
 	  },
-   
+  
   getComponent(location, cb) {
     require.ensure([], (require) => {
-      cb(null, require('./components/Apartment'))
+      cb(null, require('./components/Dashboard'))
     })
   }
 }
