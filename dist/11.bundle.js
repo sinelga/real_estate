@@ -1,0 +1,1 @@
+webpackJsonp([11],{132:function(n,t,e){"use strict";n.exports={path:"details",getComponent:function(n,t){e.e(12,function(n){t(null,e(131))})}}}});

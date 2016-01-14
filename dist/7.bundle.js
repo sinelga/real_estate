@@ -1,1 +1,1 @@
-webpackJsonp([7],{132:function(n,t,e){"use strict";n.exports={path:"details",getComponent:function(n,t){e.e(8,function(n){t(null,e(131))})}}}});
+webpackJsonp([7],{124:function(n,t,o){"use strict";n.exports={path:":imgid",getComponent:function(n,t){o.e(14,function(n){t(null,o(123))})}}}});
