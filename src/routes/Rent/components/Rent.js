@@ -5,21 +5,21 @@ class Rent extends React.Component {
 
 	componentDidMount(){
 		
-		console.log("mount Rent")
+//		console.log("mount Rent")
 		   
 	}
 	
 	componentWillReceiveProps(){
-		console.log(" Rent receive props")
-		console.log(this.props)
+//		console.log(" Rent receive props")
+//		console.log(this.props)
 	}
-	
-	
-	
+			
   render() {
 	  var rentobjs = REAL_ESTATE_OBJS;
 	  
-	  console.log(rentobjs[0].id);
+//	  console.log(JSON.stringify(rentobjs));
+	  
+//	  console.log(rentobjs[0].id);
 	  
 	  var images = [];
 	  
@@ -30,7 +30,7 @@ class Rent extends React.Component {
 	  }	  
 	  	  	  
 	  
-	  console.log("this.props.params",this.props.params)
+//	  console.log("this.props.params",this.props.params)
 	  
     return (
       <div>

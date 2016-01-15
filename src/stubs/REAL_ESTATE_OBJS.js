@@ -2,8 +2,9 @@ global.REAL_ESTATE_OBJS = [
   {
     id: 0,
     name: 'Apartment N 1',
-    type: 'apartment',
-    imagesnumber: 3,
+    type: 'apartment',   
+    actions:{action: [{type:'selling'},{type:'rent'}]},
+    images:{image: [{id:0,description:'hole'},{id:1,description:'kitchen'}]},
     announcements: [
       {
         id: 0,
@@ -25,8 +26,9 @@ global.REAL_ESTATE_OBJS = [
   {
     id: 1,
     name: 'Apartment N 2',
-    imagesnumber: 3,
     type: 'apartment',
+    actions:{action: [{type:'selling'},{type:'rent'}]},  
+    images:{image: [{id:0,description:'hole'},{id:1,description:'kitchen'}]},
     announcements: [
       {
         id: 0,

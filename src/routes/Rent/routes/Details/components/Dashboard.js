@@ -1,35 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { Button } from 'react-bootstrap';
 
 class Dashboard extends React.Component {
 	
 	componentDidMount(){
 		
-		console.log("mount Dashboard ")
+//		console.log("mount Dashboard ")
+		
 		   
 	}
 	componentWillReceiveProps(){
-		console.log(" Rent Dashboard receive props")
-		console.log(this.props)
+//		console.log(" Rent Dashboard receive props")
+//		console.log(this.props)
 	}
 	
   render() {
 	  
-	  var apartment = REAL_ESTATE_OBJS[this.props.params.id]
-	  
-		var images = [];
+	  var realestOBJ = REAL_ESTATE_OBJS[this.props.params.id]
+	  var modallink = "/rent/details/"+this.props.params.id+"/modal";
+	  var images = [];
 	
-		for (var i = 0; i <  apartment.imagesnumber; i++) {
+		for (var i = 0; i <  realestOBJ.images.image.length; i++) {
 
-			images.push(<li key={`${i}`}><img className='aparimg' src={`/images/${apartment.id}/${i}.jpg`}></img></li>);
+			images.push(<li key={`${i}`}><img className='aparimg' src={`/images/${realestOBJ.id}/${i}.jpg`}></img></li>);
 
 		}
 	  
     return (
       <div>
-        <h2>Details</h2>
+        <h2>Details</h2>  
+        <Link to={modallink}><Button bsStyle="primary" bsSize="large">All images</Button></Link>
         {images}
-        <Link to="/rent/details/modal">Details</Link>
         {this.props.children }
       </div>
     )
