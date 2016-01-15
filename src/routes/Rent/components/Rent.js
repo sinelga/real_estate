@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { Grid,Row,Col} from 'react-bootstrap'
 
 class Rent extends React.Component {
 
@@ -17,10 +18,6 @@ class Rent extends React.Component {
   render() {
 	  var rentobjs = REAL_ESTATE_OBJS;
 	  
-//	  console.log(JSON.stringify(rentobjs));
-	  
-//	  console.log(rentobjs[0].id);
-	  
 	  var images = [];
 	  
 	  for  (var i = 0; i <  rentobjs.length; i++) {
@@ -28,18 +25,22 @@ class Rent extends React.Component {
 		  images.push(<li key={`${i}`}><Link to={`/rent/details/${rentobjs[i].id}`}><img className='aparimg' src={`/images/${rentobjs[i].id}/0.jpg`}></img></Link></li>);
 	
 	  }	  
-	  	  	  
-	  
-//	  console.log("this.props.params",this.props.params)
 	  
     return (
       <div>
         <h2>Rent</h2>
         
-        <div className="row">
-        <div className="col-md-6">{images}</div>
-        <div className="col-md-6">{this.props.children }</div>
-        </div>
+    
+         
+        <Row className="show-grid">
+        <Col xs={12} md={4}>{images}</Col>
+        <Col xs={6} md={8}>{this.props.children }</Col>
+      </Row> 
+     
+        
+        
+        
+        
         
       </div>
     )
