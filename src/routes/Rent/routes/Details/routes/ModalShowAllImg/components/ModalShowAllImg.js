@@ -43,15 +43,12 @@ class ModalShowAllImg extends React.Component {
 	
 		
 	 close(){
-		 	console.log("close")
 		    this.setState({ showModal: false });
 		 	
 	}
 		
 	componentDidMount(){
-		
-		console.log("mount Modal ")
-		console.log(this.props)
+
 		this.setState({ showModal: true });
 		
 		   
@@ -65,20 +62,32 @@ class ModalShowAllImg extends React.Component {
 	
   render() {
 	  
-	  
+	  var realestOBJ = REAL_ESTATE_OBJS[this.props.params.id]
+	  var modallink = "/rent/details/"+this.props.params.id+"/modal";
+	  var images = [];
+	
+		for (var i = 0; i <  realestOBJ.images.image.length; i++) {
+			images.push(<CarouselItem key={`${i}`}><img width={900} height={500} alt="900x500" src={`/images/${realestOBJ.id}/${i}.jpg`}/></CarouselItem>);
+		}
+	  	  	  
     return (
       <div>
-        <h2>All Images</h2>
            
         <Modal show={this.state.showModal} onHide={this.close}> 
-        
-       
+               
           <Modal.Header>
-            <Modal.Title>Modal title</Modal.Title>
+            <Modal.Title>{realestOBJ.name}</Modal.Title>
           </Modal.Header>
 
           <Modal.Body>
-            {carouselInstance}
+          
+          
+		  <Carousel>
+		  	{images}
+		  </Carousel>
+          
+          
+           
           </Modal.Body>
 
           <Modal.Footer>

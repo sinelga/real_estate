@@ -1,1 +1,1 @@
-webpackJsonp([4],{372:function(n,t,o){"use strict";n.exports={path:"dashboard",getChildRoutes:function(n,t){o.e(12,function(n){t(null,[o(374)])})},getComponent:function(n,t){o.e(14,function(n){t(null,o(371))})}}}});
+webpackJsonp([4],{374:function(n,t,o){"use strict";n.exports={path:"dashboard",getChildRoutes:function(n,t){o.e(12,function(n){t(null,[o(376)])})},getComponent:function(n,t){o.e(14,function(n){t(null,o(373))})}}}});

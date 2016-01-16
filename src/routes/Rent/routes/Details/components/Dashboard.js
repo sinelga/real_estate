@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { Button } from 'react-bootstrap';
+import { Button,Row,Grid,Image } from 'react-bootstrap';
 
 class Dashboard extends React.Component {
 	
@@ -23,14 +23,15 @@ class Dashboard extends React.Component {
 	
 		for (var i = 0; i <  realestOBJ.images.image.length; i++) {
 
-			images.push(<li key={`${i}`}><img className='aparimg' src={`/images/${realestOBJ.id}/${i}.jpg`}></img></li>);
+//			images.push(<Row key={`${i}`}><Image className='aparimgforall' src={`/images/${realestOBJ.id}/${i}.jpg`} rounded /></Row>);
+			images.push(<Image key={`${i}`} className='aparimgforall' src={`/images/${realestOBJ.id}/${i}.jpg`}  thumbnail />);
 
 		}
 	  
     return (
       <div>
-        <h2>Details</h2>  
-        <Link to={modallink}><Button bsStyle="primary" bsSize="large">All images</Button></Link>
+        <h3>Details for {realestOBJ.name}</h3>  
+       <p><Link to={modallink}><Button bsStyle="primary" bsSize="large">All images</Button></Link></p>
         {images}
         {this.props.children }
       </div>

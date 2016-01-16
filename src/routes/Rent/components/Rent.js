@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { Grid,Row,Col} from 'react-bootstrap'
+import { Grid,Row,Col,Image} from 'react-bootstrap'
 
 class Rent extends React.Component {
 
@@ -22,7 +22,9 @@ class Rent extends React.Component {
 	  
 	  for  (var i = 0; i <  rentobjs.length; i++) {
 		  
-		  images.push(<li key={`${i}`}><Link to={`/rent/details/${rentobjs[i].id}`}><img className='aparimg' src={`/images/${rentobjs[i].id}/0.jpg`}></img></Link></li>);
+//		  images.push(<li key={`${i}`}><Link to={`/rent/details/${rentobjs[i].id}`}><img className='aparimg' src={`/images/${rentobjs[i].id}/0.jpg`}></img></Link></li>);
+		  images.push(<Grid key={`${i}`}><Row> <Link to={`/rent/details/${rentobjs[i].id}`}><Image className='aparimg' src={`/images/${rentobjs[i].id}/0.jpg`} rounded /></Link></Row><Row>{`${rentobjs[i].name}`}</Row></Grid>);
+//		  images.push(<Thumbnail href={`/rent/details/${rentobjs[i].id}`}  alt="171x180" src={`/images/${rentobjs[i].id}/0.jpg`} />);
 	
 	  }	  
 	  
