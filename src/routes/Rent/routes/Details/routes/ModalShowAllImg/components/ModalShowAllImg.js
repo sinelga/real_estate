@@ -67,7 +67,7 @@ class ModalShowAllImg extends React.Component {
 	  var images = [];
 	
 		for (var i = 0; i <  realestOBJ.images.image.length; i++) {
-			images.push(<CarouselItem key={`${i}`}><img width={900} height={500} alt="900x500" src={`/images/${realestOBJ.id}/${i}.jpg`}/></CarouselItem>);
+			images.push(<CarouselItem key={`${i}`}><img width={900} height={500} alt="900x500" src={`/images/${realestOBJ.id}/karusel/${i}.jpg`}/></CarouselItem>);
 		}
 	  	  	  
     return (

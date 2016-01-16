@@ -4,7 +4,7 @@ global.REAL_ESTATE_OBJS = [
     name: 'Apartment N 1',
     type: 'apartment',   
     actions:{action: [{type:'selling'},{type:'rent'}]},
-    images:{image: [{id:0,description:'hole'},{id:1,description:'kitchen'},{id:2,description:'hole'}]},
+    images:{image: [{id:0,description:'hole'},{id:1,description:'kitchen'},{id:2,description:'hole'},{id:3,description:'hole'},{id:4,description:'kitchen'},{id:5,description:'kitchen'},{id:6,description:'bathroom'},{id:7,description:'WC'},{id:8,description:'entrance'},{id:9,description:'entrance'}]},
     announcements: [
       {
         id: 0,

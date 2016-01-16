@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
 		for (var i = 0; i <  realestOBJ.images.image.length; i++) {
 
 //			images.push(<Row key={`${i}`}><Image className='aparimgforall' src={`/images/${realestOBJ.id}/${i}.jpg`} rounded /></Row>);
-			images.push(<Image key={`${i}`} className='aparimgforall' src={`/images/${realestOBJ.id}/${i}.jpg`}  thumbnail />);
+			images.push(<Image key={`${i}`} src={`/images/${realestOBJ.id}/thumbs/${i}.jpg`}  thumbnail />);
 
 		}
 	  
