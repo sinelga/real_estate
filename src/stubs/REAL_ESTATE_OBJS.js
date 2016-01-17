@@ -1,10 +1,12 @@
 global.REAL_ESTATE_OBJS = [
   {
     id: 0,
-    name: 'Apartment N 1',
-    type: 'apartment',   
-    actions:{action: [{type:'selling'},{type:'rent'}]},
-    images:{image: [{id:0,description:'hole'},{id:1,description:'kitchen'},{id:2,description:'hole'},{id:3,description:'hole'},{id:4,description:'kitchen'},{id:5,description:'kitchen'},{id:6,description:'bathroom'},{id:7,description:'WC'},{id:8,description:'entrance'},{id:9,description:'entrance'}]},
+    name: 'Apartment',
+    type: 'apartment',
+    city: 'Espoo',
+    country: 'Finland',
+    total_area: 81.5, 
+    actions:{action: [{type:'selling'},{type:'rent',price: 1000,images:{image: [{id:0,description:'hole'},{id:1,description:'kitchen'},{id:2,description:'hole'},{id:3,description:'hole'},{id:4,description:'kitchen'},{id:5,description:'kitchen'},{id:6,description:'bathroom'},{id:7,description:'WC'},{id:8,description:'entrance'},{id:9,description:'entrance'}]}}]},  
     announcements: [
       {
         id: 0,
@@ -25,10 +27,12 @@ global.REAL_ESTATE_OBJS = [
 
   {
     id: 1,
-    name: 'Apartment N 2',
+    name: 'Apartment',
     type: 'apartment',
-    actions:{action: [{type:'selling'},{type:'rent'}]},  
-    images:{image: [{id:0,description:'hole'},{id:1,description:'kitchen'},{id:2,description:'hole'}]},
+    city: 'Saint Petersburg',
+    country: 'Russia',
+    total_area: 56, 
+    actions:{action: [{type:'selling'},{type:'rent',price: 800,images:{image: [{id:0,description:'hole'},{id:1,description:'kitchen'},{id:2,description:'hole'}]}}]},      
     announcements: [
       {
         id: 0,
