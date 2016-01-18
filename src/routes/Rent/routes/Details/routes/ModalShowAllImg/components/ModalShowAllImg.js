@@ -19,7 +19,20 @@ class ModalShowAllImg extends React.Component {
 		    this.setState({ showModal: false });
 		 	
 	}
-		
+	
+	 componentWillUnmoun(){
+		 
+		 console.log("ModalShowAllImg  componentWillUnmount")
+		 
+	 } 
+	 
+	 componentWillMoun(){
+		 
+		 console.log("ModalShowAllImg  componentWillMount")
+		 
+	 } 	 
+	 
+	 
 	componentDidMount(){
 
 		this.setState({ showModal: true });

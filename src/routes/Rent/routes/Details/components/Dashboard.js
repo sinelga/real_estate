@@ -6,7 +6,7 @@ class Dashboard extends React.Component {
 	
 	componentDidMount(){
 		
-//		console.log("mount Dashboard ")
+		console.log("mount Dashboard ")
 				   
 	}
 	componentWillReceiveProps(){
