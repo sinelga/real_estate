@@ -43,6 +43,15 @@ class Rent extends React.Component {
 //		ReactDOM.findDOMNode(this.refs.startimages).style.display = '';
 		
 //		ReactDOM.findDOMNode(this.refs.startimages).style.display ='default';
+		if (this.props.params.id){
+			
+			ReactDOM.findDOMNode(this.refs.startimages).style.display ='none'
+			
+		} else {
+			ReactDOM.findDOMNode(this.refs.startimages).style.display =''
+		
+		}
+		
 		
 		   
 	}
