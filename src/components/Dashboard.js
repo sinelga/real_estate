@@ -9,7 +9,7 @@ class Dashboard extends React.Component {
       <div>
  
       	<Link to='/rent'><img src='images/forrent-sign.jpg' width='300'/></Link>
-      	<Link to='/seal'><img src='images/forsale-sign.jpg'  width='300'/> </Link>  
+      	<Link to='/sale'><img src='images/forsale-sign.jpg'  width='300'/> </Link>  
                 
       </div>
     )
