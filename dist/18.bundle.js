@@ -1,1 +1,72 @@
-webpackJsonp([18],{375:function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{"default":e}}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function u(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function a(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var l=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),i=n(1),c=o(i),f=n(121),s=function(e){function t(){return r(this,t),u(this,Object.getPrototypeOf(t).apply(this,arguments))}return a(t,e),l(t,[{key:"componentDidMount",value:function(){console.log("mount Dashboard ")}},{key:"componentWillReceiveProps",value:function(){console.log(" details Dashboard receive props"),console.log(this.props)}},{key:"render",value:function(){return c["default"].createElement("div",null,c["default"].createElement("h2",null,"Details"),c["default"].createElement(f.Link,{to:"apartment/0/0"},"Modal"))}}]),t}(c["default"].Component);e.exports=s}});
+webpackJsonp([18],{
+
+/***/ 489:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(160);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Dashboard = function (_React$Component) {
+			_inherits(Dashboard, _React$Component);
+
+			function Dashboard() {
+					_classCallCheck(this, Dashboard);
+
+					return _possibleConstructorReturn(this, Object.getPrototypeOf(Dashboard).apply(this, arguments));
+			}
+
+			_createClass(Dashboard, [{
+					key: 'componentDidMount',
+					value: function componentDidMount() {
+
+							console.log("mount Dashboard ");
+					}
+			}, {
+					key: 'componentWillReceiveProps',
+					value: function componentWillReceiveProps() {
+							console.log(" details Dashboard receive props");
+							console.log(this.props);
+					}
+			}, {
+					key: 'render',
+					value: function render() {
+							return _react2.default.createElement(
+									'div',
+									null,
+									_react2.default.createElement(
+											'h2',
+											null,
+											'Details'
+									),
+									_react2.default.createElement(
+											_reactRouter.Link,
+											{ to: 'apartment/0/0' },
+											'Modal'
+									)
+							);
+					}
+			}]);
+
+			return Dashboard;
+	}(_react2.default.Component);
+
+	module.exports = Dashboard;
+
+/***/ }
+
+});

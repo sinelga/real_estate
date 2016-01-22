@@ -1,1 +1,78 @@
-webpackJsonp([20],{367:function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{"default":e}}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function u(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function l(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var a=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}();Object.defineProperty(t,"__esModule",{value:!0});var c=n(1),f=o(c),i=function(e){function t(){return r(this,t),u(this,Object.getPrototypeOf(t).apply(this,arguments))}return l(t,e),a(t,[{key:"componentDidMount",value:function(){console.log("mount ModalShowImage ")}},{key:"render",value:function(){return console.log("modal"),f["default"].createElement("ul",null,f["default"].createElement("h2",null,"ModalShowImage"),f["default"].createElement("p",null,"lslslslsl"))}}]),t}(f["default"].Component);t["default"]=i}});
+webpackJsonp([20],{
+
+/***/ 491:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(160);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Messages = function (_React$Component) {
+		_inherits(Messages, _React$Component);
+
+		function Messages() {
+			_classCallCheck(this, Messages);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Messages).apply(this, arguments));
+		}
+
+		_createClass(Messages, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+
+				console.log("mount Messages");
+			}
+		}, {
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps() {
+				console.log(" Messages receive props");
+				console.log(this.props);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+
+				{
+					this.props.children;
+				}
+
+				return _react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Messages'
+					),
+					_react2.default.createElement(
+						_reactRouter.Link,
+						{ to: '/messages/dashboard' },
+						'Modal'
+					),
+					this.props.children
+				);
+			}
+		}]);
+
+		return Messages;
+	}(_react2.default.Component);
+
+	module.exports = Messages;
+
+/***/ }
+
+});

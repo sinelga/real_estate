@@ -6,7 +6,7 @@ class Dashboard extends React.Component {
 	
 	componentDidMount(){
 		
-		console.log("mount Dashboard ")
+//		console.log("mount Dashboard ")
 				   
 	}
 	componentWillReceiveProps(){
@@ -18,6 +18,7 @@ class Dashboard extends React.Component {
 	  
 	  var realestOBJ = REAL_ESTATE_OBJS[this.props.params.id]
 	  var modallink = "/rent/details/"+this.props.params.id+"/modal";
+	  var alldetailslink = "/rent/details/"+this.props.params.id+"/alldetails";
 	  var images = [];
 
 	  for (var i = 0; i <  realestOBJ.actions.action[1].images.image.length; i++) {
@@ -29,7 +30,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <h3>Details: {realestOBJ.name} {realestOBJ.total_area}m²  {realestOBJ.city}</h3>  
-       <p><Link to={modallink}><Button bsStyle="primary" bsSize="large">All images</Button></Link></p>
+       <p><Link to={modallink}><Button bsStyle="primary" bsSize="large">All images</Button></Link>  <Link to={alldetailslink}><Button bsStyle="primary" bsSize="large">All details</Button></Link>       </p>
         {images}
         {this.props.children }
       </div>
