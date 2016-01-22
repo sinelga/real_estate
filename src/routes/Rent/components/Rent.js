@@ -36,18 +36,6 @@ class Rent extends React.Component {
 		console.log("mount Rent")
 		
 		this.toggledisplay()
-//		ReactDOM.findDOMNode(this.refs.startimages).style.display = '';
-		
-//		ReactDOM.findDOMNode(this.refs.startimages).style.display ='default';
-//		if (this.props.params.id){
-//			
-//			ReactDOM.findDOMNode(this.refs.startimages).style.display ='none'
-//			
-//		} else {
-//			ReactDOM.findDOMNode(this.refs.startimages).style.display =''
-//		
-//		}
-		
 		
 		   
 	}
@@ -79,7 +67,7 @@ class Rent extends React.Component {
 	  
     return (
       <div>
-        <h2>Rent</h2>
+        <h1>Rent</h1>
                 
         <Row className="show-grid">
         <Col ref='startimages'  xs={12} md={4}>{images}</Col>

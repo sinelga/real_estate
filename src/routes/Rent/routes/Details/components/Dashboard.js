@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <h3>Details: {realestOBJ.name} {realestOBJ.total_area}m²  {realestOBJ.city}</h3>  
-       <p><Link to={modallink}><Button bsStyle="primary" bsSize="large">All images</Button></Link>  <Link to={alldetailslink}><Button bsStyle="primary" bsSize="large">All details</Button></Link>       </p>
+       <p><Link to={modallink}><Button bsStyle="primary" bsSize="large">All images</Button></Link>  <Link to={alldetailslink}><Button bsStyle="primary" bsSize="large">All details</Button></Link> </p>
         {images}
         {this.props.children }
       </div>

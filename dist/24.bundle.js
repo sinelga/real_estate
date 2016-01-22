@@ -16852,7 +16852,8 @@ webpackJsonp([24],Array(226).concat([
 	module.exports = exports['default'];
 
 /***/ },
-/* 468 */
+/* 468 */,
+/* 469 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16875,89 +16876,117 @@ webpackJsonp([24],Array(226).concat([
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Dashboard = function (_React$Component) {
-		_inherits(Dashboard, _React$Component);
+	var AllDetails = function (_React$Component) {
+		_inherits(AllDetails, _React$Component);
 
-		function Dashboard() {
-			_classCallCheck(this, Dashboard);
+		function AllDetails(props) {
+			_classCallCheck(this, AllDetails);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Dashboard).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(AllDetails).call(this, props));
+			//    this.state = {
+			//    	showModal: false
+			//    	
+			//    }
+			//    this.close =this.close.bind(this)
 		}
 
-		_createClass(Dashboard, [{
+		//	close(){
+		//		    this.setState({ showModal: false });
+		//		 	
+		//	}
+
+		_createClass(AllDetails, [{
+			key: 'componentWillUnmoun',
+			value: function componentWillUnmoun() {
+
+				console.log("ModalShowAllImg  componentWillUnmount");
+			}
+		}, {
+			key: 'componentWillMoun',
+			value: function componentWillMoun() {
+
+				console.log("ModalShowAllImg  componentWillMount");
+			}
+		}, {
 			key: 'componentDidMount',
 			value: function componentDidMount() {
 
-				//		console.log("mount Dashboard ")
+				//		this.setState({ showModal: true });
 
 			}
 		}, {
 			key: 'componentWillReceiveProps',
 			value: function componentWillReceiveProps() {
-				//		console.log(" Rent Dashboard receive props")
-				//		console.log(this.props)
+				//		this.setState({ showModal: true });
 			}
 		}, {
 			key: 'render',
 			value: function render() {
 
 				var realestOBJ = REAL_ESTATE_OBJS[this.props.params.id];
-				var modallink = "/rent/details/" + this.props.params.id + "/modal";
-				var alldetailslink = "/rent/details/" + this.props.params.id + "/alldetails";
-				var images = [];
-
-				for (var i = 0; i < realestOBJ.actions.action[1].images.image.length; i++) {
-
-					images.push(_react2.default.createElement(_reactBootstrap.Image, { key: '' + i, src: '/images/' + realestOBJ.id + '/thumbs/' + i + '.jpg', thumbnail: true }));
-				}
+				var contactlink = "/rent/details/" + this.props.params.id + "/alldetails/contact";
 
 				return _react2.default.createElement(
 					'div',
 					null,
 					_react2.default.createElement(
-						'h3',
+						'h2',
 						null,
-						'Details: ',
-						realestOBJ.name,
-						' ',
-						realestOBJ.total_area,
-						'm²  ',
-						realestOBJ.city
+						'All Details '
 					),
 					_react2.default.createElement(
-						'p',
-						null,
+						_reactBootstrap.Row,
+						{ className: 'show-grid' },
 						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: modallink },
+							_reactBootstrap.Col,
+							{ xs: 12, md: 8 },
 							_react2.default.createElement(
-								_reactBootstrap.Button,
-								{ bsStyle: 'primary', bsSize: 'large' },
-								'All images'
+								_reactBootstrap.ListGroup,
+								null,
+								_react2.default.createElement(
+									_reactBootstrap.ListGroupItem,
+									{ header: 'Price:' },
+									realestOBJ.actions.action[1].price,
+									' EUR/month'
+								),
+								_react2.default.createElement(
+									_reactBootstrap.ListGroupItem,
+									{ header: 'Address:' },
+									realestOBJ.street,
+									', ',
+									realestOBJ.city,
+									' ',
+									realestOBJ.country
+								)
 							)
 						),
-						'  ',
 						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: alldetailslink },
+							_reactBootstrap.Col,
+							{ xs: 12, md: 4 },
 							_react2.default.createElement(
-								_reactBootstrap.Button,
-								{ bsStyle: 'primary', bsSize: 'large' },
-								'All details'
+								'p',
+								null,
+								_react2.default.createElement(
+									_reactRouter.Link,
+									{ to: contactlink },
+									_react2.default.createElement(
+										_reactBootstrap.Button,
+										{ bsStyle: 'danger', bsSize: 'large' },
+										'Contact as'
+									)
+								)
 							)
-						),
-						'       '
+						)
 					),
-					images,
 					this.props.children
 				);
 			}
 		}]);
 
-		return Dashboard;
+		return AllDetails;
 	}(_react2.default.Component);
 
-	module.exports = Dashboard;
+	module.exports = AllDetails;
 
 /***/ }
 ]));

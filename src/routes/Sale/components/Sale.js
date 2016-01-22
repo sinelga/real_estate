@@ -33,22 +33,8 @@ class Sale extends React.Component {
 	}	
 	
 	componentDidMount(){		
-		console.log("mount Rent")
 		
-		this.toggledisplay()
-//		ReactDOM.findDOMNode(this.refs.startimages).style.display = '';
-		
-//		ReactDOM.findDOMNode(this.refs.startimages).style.display ='default';
-//		if (this.props.params.id){
-//			
-//			ReactDOM.findDOMNode(this.refs.startimages).style.display ='none'
-//			
-//		} else {
-//			ReactDOM.findDOMNode(this.refs.startimages).style.display =''
-//		
-//		}
-		
-		
+		this.toggledisplay()		
 		   
 	}
 	
@@ -59,9 +45,8 @@ class Sale extends React.Component {
 	componentDidUpdate(prevProps) {
 		
 		this.toggledisplay()
-
 					
- }
+	}
 	
 			
   render() {
@@ -79,14 +64,12 @@ class Sale extends React.Component {
 	  
     return (
       <div>
-        <h2>Sale</h2>
-                
-        <Row className="show-grid">
+        <h1>Sale</h1>                
+      <Row className="show-grid">
         <Col ref='startimages'  xs={12} md={4}>{images}</Col>
         <Col xs={6} md={8}>{this.props.children}</Col>
       </Row> 
-                     
-        
+                             
       </div>
     )
   }

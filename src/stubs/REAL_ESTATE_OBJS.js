@@ -3,6 +3,7 @@ global.REAL_ESTATE_OBJS = [
     id: 0,
     name: 'Apartment',
     type: 'apartment',
+    street: 'Kalasääksentie 8 A 5',
     city: 'Espoo',
     country: 'Finland',
     total_area: 81.5, 
@@ -22,13 +23,13 @@ global.REAL_ESTATE_OBJS = [
         grade: 'N/A'
       }
     ]
-
   },
 
   {
     id: 1,
     name: 'Apartment',
     type: 'apartment',
+    street: 'Ligovskij 105-123',
     city: 'Saint Petersburg',
     country: 'Russia',
     total_area: 56, 
