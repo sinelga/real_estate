@@ -14,6 +14,7 @@ class Rent extends React.Component {
 	    this. toggledisplay=this.toggledisplay.bind(this)	
 	  }
 
+	
 	toggledisplay(){
 		
 		if (this.props.params.id){
@@ -29,11 +30,11 @@ class Rent extends React.Component {
 	}
 	
 	componentWillMount(){
-	
+		console.log("Willmount Rent")
 	}	
 	
 	componentDidMount(){		
-		console.log("mount Rent")
+//		console.log("mount Rent")
 		
 		this.toggledisplay()
 		
