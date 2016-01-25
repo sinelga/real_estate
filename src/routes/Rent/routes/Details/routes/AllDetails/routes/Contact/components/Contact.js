@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { Modal,Button,Input} from 'react-bootstrap'
-import Firebase from 'firebase'
-//import {ReactFireMixin} from 'reactfire'
 import Rebase from 're-base';
 
 
@@ -19,18 +17,16 @@ class Contact extends React.Component {
     	email: '',
     	phone: '',
     	message:'',
-    	messages: []
-    	
-    	
+    	contacts: []
+    	    	
     }
-//    mixins: [ReactFireMixin]
     this.close =this.close.bind(this)
     this.handleNameChange = this.handleNameChange.bind(this)
     this.handleEmailChange = this.handleEmailChange.bind(this)
     this.handlePhoneChange = this.handlePhoneChange.bind(this)
     this.handleMessageChange = this.handleMessageChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-//    this.ReactFireMixin = this.ReactFireMixin.bind(this)
+
   }
 	
 	 handleSubmit(e) {
@@ -40,19 +36,21 @@ class Contact extends React.Component {
 		    var phone = this.state.phone.trim();
 		    var message = this.state.message.trim();
 		    
-		    console.log(this.state.messages); 
+		    console.log(this.state.contacts); 
 		    
 		    if ((!name && !email) || (!name && !phone)) {
 		        return;
 		     } else {
-//		    	 console.log(name,message);
+
 		    	 this.close();
-		    	 
-//		    	 console.log(messages);
-		    	 
+		    	 var pathname = this.props.location.pathname
+		    	 var now = new Date();
 		    	 base.post('clients', {
-		    	      data: this.state.messages.concat([{
-		    	        name: name,
+		    	      data: this.state.contacts.concat([{
+		    	        date: now.toLocaleString(),
+//		    	    	date: now. getTime(), 
+		    	    	path: pathname,
+		    	    	name: name,
 		    	        email: email,
 		    	        phone: phone,
 		    	        message: message
@@ -64,12 +62,11 @@ class Contact extends React.Component {
 		    	       */
 		    	      then: () => {
 		    	        console.log('POSTED');
+		    	        this.setState({name: '', email: '',phone: '',message: ''});
+		    	        
 		    	      }
 		    	    });
-
-		    	 
-		    	 
-		    	 
+		    	 			    	 		    	 
 		     }
 
 		  }
@@ -90,15 +87,9 @@ class Contact extends React.Component {
 	}
 	
 	 close(){
-		    this.setState({ showModal: false });
+		 this.setState({ showModal: false });
 		 	
 	}
-	
-	 save(){
-		 console.log("Save")
-		  
-		 
-	 }
 	 
 	 componentWillUnmoun(){
 		 
@@ -111,18 +102,21 @@ class Contact extends React.Component {
 		 console.log("contact  componentWillMount");
 
 		 
-	 } 	 
-	
-
+	 }
 	 
+	 componentWillUnmount(){
+		 console.log("contact componentWillUnmount")
+		 base.removeBinding(this.ref)
+	 }
+		 
 	componentDidMount(){
 		
-		console.log("contact componentDidMount")
+		console.log("contact componentDidMount",this.props.location)
 		this.setState({ showModal: true });
 
-		  base.bindToState('clients', {
+		this.ref = base.bindToState('clients', {
 		      context: this,
-		      state: 'messages',
+		      state: 'contacts',
 		      asArray: true
 		    });
 		
@@ -163,7 +157,6 @@ class Contact extends React.Component {
           	<Button bsStyle="primary" onClick={this.handleSubmit}>Save changes</Button>
             <Button onClick={this.close}>Close</Button>
           </Modal.Footer>
-
         
         </Modal>
                

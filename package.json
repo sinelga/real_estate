@@ -25,8 +25,7 @@
     "react": "^0.14.6",
     "react-bootstrap": "^0.28.2",
     "react-dom": "^0.14.6",
-    "react-router": "2.0.0-rc5",
-    "reactfire": "^0.5.1"
+    "react-router": "2.0.0-rc5"
   },
   "devDependencies": {
     "babel-core": "^6.4.0",
